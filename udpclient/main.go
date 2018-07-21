@@ -26,6 +26,10 @@ func main() {
 		wg.Add(1)
 		data := fmt.Sprintf("hello-%d", i)
 		fmt.Println(data)
+		//if i %100 == 0{
+		//	time.Sleep(time.Millisecond*100)
+		//}
+
 		go func(i int){
 			defer wg.Done()
 

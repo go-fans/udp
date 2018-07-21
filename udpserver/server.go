@@ -55,7 +55,6 @@ func listener(conn *net.UDPConn,id int, quit chan struct{}){
 			Addr : remoteAddr,
 			Data: string(data[:n]),
 		}
-
 	}
 	fmt.Printf("listener %d over\n",id)
 	quit <- struct{}{}
